@@ -7,7 +7,7 @@
 
 body {
     background-color: rgb(27, 27, 52);
-    background-image: url(imagens/certooooo.jpg);
+    background-image: url(../imagens/certooooo.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto 1500px;
@@ -60,6 +60,7 @@ header {
 main {
     padding-top: 150px;
     padding-bottom: 40px;
+    margin-inline: auto;
     }
     section {
         color: rgb(255, 255, 255);
@@ -96,6 +97,7 @@ main {
 
 
 footer {
+    margin: 0;
     background-color: rgb(16, 16, 35);
     box-sizing: border-box;
     width: 100%;
@@ -103,9 +105,29 @@ footer {
     p {
         color: white;
         text-align: center;
+        font-weight: bolder;
     }
 }
-
-.iframe {
-    margin-inline: auto;
+.jogo {
+    margin-bottom: 0;
+    iframe {
+        margin-inline: 200px;
+        padding-top: 110px;
+        padding-bottom: 0;
+    }
+}
+.grass{
+    width: 100%;
+position: fixed;
+z-index: -1;
+img {
+    width: 100%;
+}
+}
+.space {
+    width: 13%;
+    float: right;
+    img {
+        width: 100%;
+    }
 }

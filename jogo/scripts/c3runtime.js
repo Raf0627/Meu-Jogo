@@ -1332,7 +1332,6 @@ self.C3_ExpressionFuncs = [
 		() => "pular",
 		() => 0.1,
 		() => 0.2,
-		() => 550,
 		() => 330,
 		p => {
 			const v0 = p._GetNode(0).GetVar();

@@ -27,6 +27,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Audio.Acts.StopAll,
 		C3.Plugins.Audio.Acts.Play,
 		C3.Plugins.Sprite.Acts.SetAnim,
+		C3.Plugins.System.Acts.SetVar,
 		C3.Behaviors.LOS.Cnds.HasLOSToObject,
 		C3.Plugins.System.Cnds.CompareBoolVar,
 		C3.Behaviors.Bullet.Acts.SetAngleOfMotion,
@@ -44,7 +45,6 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Acts.ResetGlobals,
 		C3.Behaviors.Pin.Acts.PinByProperties,
 		C3.Plugins.System.Acts.ResetEventVar,
-		C3.Plugins.System.Acts.SetVar,
 		C3.Behaviors.Fade.Acts.StartFade,
 		C3.Behaviors.Platform.Cnds.IsMoving,
 		C3.Plugins.Sprite.Cnds.IsAnimPlaying,
@@ -167,7 +167,8 @@ self.C3_JsPropNameTable = [
 	{Inimigos: 0},
 	{machine: 0},
 	{fase1: 0},
-	{som: 0}
+	{som: 0},
+	{forcaPulo: 0}
 ];
 
 self.InstanceType = {
