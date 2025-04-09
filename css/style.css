@@ -10,7 +10,8 @@ body {
     background-image: url(../imagens/certooooo.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: auto 1500px;
+    background-size: cover; /* Changed from auto 1500px */
+    background-attachment: fixed; /* Keeps background fixed while scrolling */
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -59,6 +60,17 @@ header {
     }
 }
 
+header ul li a {
+    text-decoration: none;
+    color: rgba(175, 175, 175, 0.7); /* Slightly dimmed by default */
+    text-transform: uppercase;
+}
+
+header ul li a:hover,
+header ul li a.active {
+    transition: 0.15s;
+    color: white; /* Full white for hover and active state */
+}
 
 .imgLogo {
     width: 150px; 
@@ -352,6 +364,11 @@ form button:hover {
         margin-top: 100px;
         background-color: rgb(27, 27, 52);
     }
+
+    body {
+        background-size: cover;
+        background-attachment: fixed;
+    }
 }
 
 @media (max-width: 480px) {
@@ -390,6 +407,10 @@ form button:hover {
     .mobile-warning p {
         font-size: 14px;
         padding: 10px;
+    }
+
+    body {
+        background-position: center center; /* Better centering for smaller devices */
     }
 }
 
