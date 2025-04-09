@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Knight - Sobre</title>
+    <title>Travel Knight - Contato</title>
     <link rel="shortcut icon" href="imagens/Jump (1).PNG">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,18 +30,15 @@
         </nav>
     </header>
     <main>
-        <section data-aos="fade-zoom-in" data-aos-duration="1200">
-            <h2>🌟 Sobre Mim</h2>
-<p>Meu nome é Rafael Frossard, tenho 18 anos e sou estudante do Centro Universitário Integrado, onde curso Tecnologia em Análise e Desenvolvimento de Sistemas. Atualmente, estou no primeiro ano e desenvolvi o Travel Knight como parte de um projeto acadêmico.
-<br> <br>
-    Meu foco é aprender e aprimorar minhas habilidades em programação e desenvolvimento de software. Este é um dos meus primeiros projetos na área, e faço uso dele para aplicar os conhecimentos adquiridos no curso. <br> <br>
-</p>
-<h2>🎮 Sobre o Jogo</h2>
-<p>Travel Knight é um jogo que conta a história de um garoto que encontra uma máquina do tempo e embarca em uma aventura incrível. Ele viaja para a era medieval, enfrentando desafios em castelos e batalhas, e depois segue para o espaço, explorando o desconhecido. O jogo possui duas fases e uma pequena história, trazendo uma experiência envolvente para os jogadores. <br> <br>
-
-    O desenvolvimento do jogo foi possível graças aos conhecimentos adquiridos no curso de Tecnologia em Análise e Desenvolvimento de Sistemas (TADS). Durante o curso, são abordadas áreas como programação, design de software e desenvolvimento de jogos, permitindo que os alunos criem projetos próprios. Travel Knight é um exemplo de como a teoria pode ser aplicada na prática, resultando em um jogo criativo e bem estruturado.
-</p>
-        </section>
+      <form id="form">
+        <label>Nome:</label>
+        <input type="text" id="nome">
+        <label>E-mail:</label>
+        <input type="email" id="email">
+        <label>Telefone:</label>
+        <input type="text" id="telefone">
+        <button type="button" id="botao">Enviar</button>
+      </form>
     </main>
     <footer>
         <p>Desenvolvido por Rafael Frossard</p>
@@ -87,6 +84,38 @@
             anchorPlacement: 'top-bottom'
         });
     </script>
+    <script>
+        document.getElementById(`botao`).onclick = function () {
+            var nome = document.getElementById(`nome`).value;
+
+            var email = document.getElementById(`email`).value;
+
+            var telefone = document.getElementById(`telefone`).value;
+
+            if (nome=="" && email =="" && telefone == "") {
+                alert("Por favor, preencha todos os campos.");
+            } else {
+                if (nome== "") {
+                    alert("Informe o nome");
+                }
+                if (email == "") {
+                    alert("Informe o email");
+                } else if (!validateEmail(email)) {
+                    alert("E-mail inválido!");
+                }
+                if (telefone == "") {
+                    alert("Informe o telefone");
+                }
+            }
+            if (nome!= "" && email != "" && telefone != "") {
+                alert("Formulário enviado com sucesso!");
+            }
+        }
+        const validateEmail = (email) => {
+            const regex = /^[^\s]+@[^\s]+$/;
+            return regex.test(email);
+        };
+    </script>
 </body>
 
 </html>

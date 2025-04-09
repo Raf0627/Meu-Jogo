@@ -52,24 +52,24 @@
         document.addEventListener('DOMContentLoaded', () => {
             const header = document.querySelector('header');
             
-            // Create menu button
+           
             const menuButton = document.createElement('button');
             menuButton.className = 'menu-toggle';
             menuButton.innerHTML = '☰';
             menuButton.setAttribute('aria-label', 'Menu');
             
-            // Add button to header
+          
             header.insertBefore(menuButton, header.firstChild);
             
             const nav = document.querySelector('nav');
             
-            // Toggle menu
+        
             menuButton.addEventListener('click', () => {
                 nav.classList.toggle('active');
                 menuButton.innerHTML = nav.classList.contains('active') ? '✕' : '☰';
             });
 
-            // Close menu when clicking outside
+         
             document.addEventListener('click', (e) => {
                 if (!nav.contains(e.target) && !menuButton.contains(e.target)) {
                     nav.classList.remove('active');

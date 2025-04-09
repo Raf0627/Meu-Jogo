@@ -33,7 +33,7 @@
         <section data-aos="fade-up" data-aos-duration="1200">
             <h1>Seja bem-vindo</h1>
             <p>Este é o site oficial do jogo Travel Knight, criado pelo aluno de TADS, Rafael Frossard.</p>
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/xzCEdSKMkdU?si=EsCLR_jDVEXu67Fu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="ytb"></iframe>
+            <img src="imagens/novaImg_LE_upscale_balanced_x4.jpg" alt="">
         </section>
     </main>
     <footer>
@@ -44,24 +44,24 @@
         document.addEventListener('DOMContentLoaded', () => {
             const header = document.querySelector('header');
             
-            // Create menu button
+            
             const menuButton = document.createElement('button');
             menuButton.className = 'menu-toggle';
             menuButton.innerHTML = '☰';
             menuButton.setAttribute('aria-label', 'Menu');
             
-            // Add button to header
+            
             header.insertBefore(menuButton, header.firstChild);
             
             const nav = document.querySelector('nav');
             
-            // Toggle menu
+            
             menuButton.addEventListener('click', () => {
                 nav.classList.toggle('active');
                 menuButton.innerHTML = nav.classList.contains('active') ? '✕' : '☰';
             });
 
-            // Close menu when clicking outside
+            
             document.addEventListener('click', (e) => {
                 if (!nav.contains(e.target) && !menuButton.contains(e.target)) {
                     nav.classList.remove('active');

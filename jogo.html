@@ -10,8 +10,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -32,6 +33,18 @@
     <aside class="grass" data-aos="fade-in" data-aos-duration="1500">
         <img src="imagens/grass.JPG" alt="banner 1">
     </aside>
+
+    <!-- Add mobile warning message -->
+    <div class="mobile-warning" data-aos="fade-up" data-aos-duration="1200">
+        <h2>⚠️ Aviso de Compatibilidade</h2>
+        <p>
+            O Travel Knight foi desenvolvido para ser jogado em computadores e não é compatível com dispositivos móveis. 
+            Para a melhor experiência de jogo, por favor, acesse esta página através de um desktop ou notebook.
+            <br><br>
+            Você pode conhecer mais sobre o jogo explorando as outras seções do site enquanto estiver no celular!
+        </p>
+    </div>
+
     <div class="jogo" data-aos="zoom-in" data-aos-duration="1200">
         <iframe src="jogo/index.html" width="72%" height="730px" frameborder="0"></iframe>
     </div>
@@ -42,25 +55,25 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const header = document.querySelector('header');
-            
-            // Create menu button
+
+
             const menuButton = document.createElement('button');
             menuButton.className = 'menu-toggle';
             menuButton.innerHTML = '☰';
             menuButton.setAttribute('aria-label', 'Menu');
-            
-            // Add button to header
+
+
             header.insertBefore(menuButton, header.firstChild);
-            
+
             const nav = document.querySelector('nav');
-            
-            // Toggle menu
+
+
             menuButton.addEventListener('click', () => {
                 nav.classList.toggle('active');
                 menuButton.innerHTML = nav.classList.contains('active') ? '✕' : '☰';
             });
 
-            // Close menu when clicking outside
+
             document.addEventListener('click', (e) => {
                 if (!nav.contains(e.target) && !menuButton.contains(e.target)) {
                     nav.classList.remove('active');
@@ -80,4 +93,5 @@
         });
     </script>
 </body>
+
 </html>
