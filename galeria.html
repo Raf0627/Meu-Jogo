@@ -11,12 +11,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body>
     <header>
-        <a href="index.html" title="home"><img src="imagens/2343.png" alt="logo" class="imgLogo"></a>
-        <nav>
+        <a href="index.html" title="home" data-aos="zoom-in" data-aos-duration="1000">
+            <img src="imagens/2343.png" alt="logo" class="imgLogo">
+        </a>
+        <nav data-aos="slide-left" data-aos-duration="1000">
             <ul>
                 <li><a href="index.html" title="home">Início</a></li>
                 <li><a href="jogo.html" title="jogar">jogar</a></li>
@@ -28,22 +32,62 @@
     </header>
     <main>
         <section>
-           <div class="grid">
-            <img src="imagens/Screenshot 2025-04-07 140825.png" alt="imagem 1" class="col">
-           <img src="imagens/Screenshot 2025-04-07 140911.png" alt="imagem 2" class="col">
-           <img src="imagens/Screenshot 2025-04-07 140949.png" alt="imagem 3" class="col">
-           <img src="imagens/Screenshot 2025-04-07 141113.png" alt="imagem 4" class="col">
-           <img src="imagens/Screenshot 2025-04-07 141307.png" alt="imagem 5" class="col">
-           <img src="imagens/Screenshot 2025-04-07 141348.png" alt="imagem 6" class="col">
-           <img src="imagens/Screenshot 2025-04-07 141444.png" alt="imagem 7" class="col">
-           <img src="imagens/Screenshot 2025-04-07 170258.png" alt="imagem 8" class="col">
-        </div>
+            <div class="grid" data-aos="zoom-in-up" data-aos-duration="1200">
+                <img src="imagens/Screenshot 2025-04-07 140825.png" alt="imagem 1" class="col">
+                <img src="imagens/Screenshot 2025-04-07 140911.png" alt="imagem 2" class="col">
+                <img src="imagens/Screenshot 2025-04-07 140949.png" alt="imagem 3" class="col">
+                <img src="imagens/Screenshot 2025-04-07 141113.png" alt="imagem 4" class="col">
+                <img src="imagens/Screenshot 2025-04-07 141307.png" alt="imagem 5" class="col">
+                <img src="imagens/Screenshot 2025-04-07 141348.png" alt="imagem 6" class="col">
+                <img src="imagens/Screenshot 2025-04-07 141444.png" alt="imagem 7" class="col">
+                <img src="imagens/Screenshot 2025-04-07 170258.png" alt="imagem 8" class="col">
+            </div>
         </section>
     </main>
     <footer>
         <p>Desenvolvido por Rafael Frossard</p>
         <p><a href="https://facebook.com" title="Facebook"><i class="fab fa-facebook"></i></a></p>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.querySelector('header');
+            
+            // Create menu button
+            const menuButton = document.createElement('button');
+            menuButton.className = 'menu-toggle';
+            menuButton.innerHTML = '☰';
+            menuButton.setAttribute('aria-label', 'Menu');
+            
+            // Add button to header
+            header.insertBefore(menuButton, header.firstChild);
+            
+            const nav = document.querySelector('nav');
+            
+            // Toggle menu
+            menuButton.addEventListener('click', () => {
+                nav.classList.toggle('active');
+                menuButton.innerHTML = nav.classList.contains('active') ? '✕' : '☰';
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!nav.contains(e.target) && !menuButton.contains(e.target)) {
+                    nav.classList.remove('active');
+                    menuButton.innerHTML = '☰';
+                }
+            });
+        });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            offset: 100,
+            duration: 1000,
+            disable: 'mobile',
+            anchorPlacement: 'top-bottom'
+        });
+    </script>
 </body>
 
 </html>
