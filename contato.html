@@ -105,12 +105,10 @@
                 }
                 if (telefone == "") {
                     alert("Informe o telefone");
-                }
-            }
-            if (nome!= "" && email != "" && telefone != "") {
+                } else {
                 alert("Formulário enviado com sucesso!");
             }
-        }
+        }}
         const validateEmail = (email) => {
             const regex = /^[^\s]+@[^\s]+$/;
             return regex.test(email);
