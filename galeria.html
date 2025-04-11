@@ -1,69 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Travel Knight - Galeria</title>
-    <link rel="icon" href="imagens/icon.PNG" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/all.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  </head>
-  <body>
-    <header>
-      <img src="imagens/logo.png" alt="logo" class="logo" data-aos="zoom-in" data-aos-duration="1000">
-      <a href="javascript:mostrarmenu()" title="Menu" class="botao-nav">
-          <i class="fa-solid fa-bars"></i>
-      </a>
-      <nav data-aos="fade-right" data-aos-duration="1000">
-        <div class="col">
-          <a href="index.html" title="home">Início</a>
-        </div>
-        <div class="col"><a href="jogar.html" title="jogar">jogar</a></div>
-        <div class="col"><a href="sobre.html" title="sobre">Sobre</a></div>
-        <div class="col">
-          <a
-            href="galeria.html"
-            title="galeria"
-            class="active"
-            style="color: white"
-            >galeria</a
-          >
-        </div>
-        <div class="col">
-          <a href="contato.html" title="contato">Contato</a>
-        </div>
-      </nav>
-    </header>
-    <main class="main-galeria">
-      <section class="section-galeria inicio"  data-aos="fade-up" data-aos-duration="1000">
-            <div class="col"><img src="imagens/foto1.png" alt="foto 1"></div>
-            <div class="col"><img src="imagens/foto2.png" alt="foto 1"></div>
-            <div class="col"><img src="imagens/foto3.png" alt="foto 1"></div>
-            <div class="col"><img src="imagens/foto4.png" alt="foto 1"></div>
-            <div class="col"><img src="imagens/foto5.png" alt="foto 1"></div>
-            <div class="col"><img src="imagens/foto6.png" alt="foto 1"></div>
-            <div class="col"><img src="imagens/foto7.png" alt="foto 1"></div>
-            <div class="col"><img src="imagens/foto8.png" alt="foto 1"></div>
-      </section>
-    </main>
-    <footer data-aos="fade-down" data-aos-duration="1000">
-      <p>Desenvolvido por Rafael Frossard</p> <br>
-      <a href="https://www.instagram.com/rafaelpnf/" title="instagram"><i class="fa-brands fa-instagram"></i></a>
-    </footer>
-    <script>
-        function mostrarmenu() {
-            $("header nav").toggle(".esconder");
-        }
-    </script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        AOS.init({
-            once:true,
-        });
-    </script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travel Knight - Galeria</title>
+  <link rel="icon" href="imagens/icon.PNG" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/all.min.css" />
+  <link rel="stylesheet" href="css/all.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <img src="imagens/logo.png" alt="logo" class="logo" data-aos="zoom-in" data-aos-duration="1000" />
+    <a href="javascript:mostrarmenu()" title="Menu" class="botao-nav">
+      <i class="fa-solid fa-bars"></i>
+    </a>
+    <nav data-aos="fade-right" data-aos-duration="1000">
+      <div class="col">
+        <a href="index.html" title="home">Início</a>
+      </div>
+      <div class="col"><a href="jogar.html" title="jogar">jogar</a></div>
+      <div class="col"><a href="sobre.html" title="sobre">Sobre</a></div>
+      <div class="col">
+        <a href="galeria.html" title="galeria" style="color: white">galeria</a>
+      </div>
+      <div class="col">
+        <a href="contato.html" title="contato">Contato</a>
+      </div>
+    </nav>
+  </header>
+  <main class="main-galeria">
+    <section class="section-galeria inicio" data-aos="fade-up" data-aos-duration="1000">
+      <div class="col"><img src="imagens/foto1.png" alt="foto 1" /></div>
+      <div class="col"><img src="imagens/foto2.png" alt="foto 1" /></div>
+      <div class="col"><img src="imagens/foto3.png" alt="foto 1" /></div>
+      <div class="col"><img src="imagens/foto4.png" alt="foto 1" /></div>
+      <div class="col"><img src="imagens/foto5.png" alt="foto 1" /></div>
+      <div class="col"><img src="imagens/foto6.png" alt="foto 1" /></div>
+      <div class="col"><img src="imagens/foto7.png" alt="foto 1" /></div>
+      <div class="col"><img src="imagens/foto8.png" alt="foto 1" /></div>
+    </section>
+  </main>
+  <footer data-aos="fade-down" data-aos-duration="1000">
+    <p>Desenvolvido por Rafael Frossard</p>
+    <br />
+    <a href="https://www.instagram.com/rafaelpnf/" title="instagram"><i class="fa-brands fa-instagram"></i></a>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    function mostrarmenu() {
+      $("header nav").toggle(".esconder");
+    }
+  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+    });
+  </script>
+</body>
+
 </html>

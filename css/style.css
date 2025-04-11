@@ -29,7 +29,7 @@ header {
         float: left;
     }
     nav {
-        display: flex;
+        display: flex; /* Comentário indica duplicação */
         flex-direction: row;
         float: right;
         text-transform: uppercase;
@@ -113,11 +113,11 @@ text-align: center;
     width: 100%;
     .col {
         width: 50%;
-    img {
-        width: 100%;
-        padding: 10px;
+        img {
+            width: 100%;
+            padding: 10px;
+        }
     }
-}
 }
 
 form {
@@ -181,8 +181,7 @@ form {
         }
     
     header nav {
-        display: none; /*///!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-        display: flex;
+        display: none;
         flex-direction: column;
         width: 100%;
         .col {

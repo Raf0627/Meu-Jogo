@@ -6,22 +6,33 @@
     <title>Travel Knight - Jogar</title>
     <link rel="icon" href="imagens/icon.PNG" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/all.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/all.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <header>
-      <img src="imagens/logo.png" alt="logo" class="logo" data-aos="zoom-in" data-aos-duration="1000">
+      <img
+        src="imagens/logo.png"
+        alt="logo"
+        class="logo"
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+      />
       <a href="javascript:mostrarmenu()" title="Menu" class="botao-nav">
-          <i class="fa-solid fa-bars"></i>
+        <i class="fa-solid fa-bars"></i>
       </a>
       <nav data-aos="fade-right" data-aos-duration="1000">
         <div class="col">
-          <a href="index.html" title="home" class="active">Início</a>
+          <a href="index.html" title="home">Início</a>
         </div>
-        <div class="col"><a href="jogar.html" title="jogar"  style="color: white;">jogar</a></div>
+        <div class="col">
+          <a href="jogar.html" title="jogar" style="color: white">jogar</a>
+        </div>
         <div class="col"><a href="sobre.html" title="sobre">Sobre</a></div>
         <div class="col">
           <a href="galeria.html" title="galeria">galeria</a>
@@ -34,35 +45,50 @@
     <main class="main-jogar">
       <section class="section-jogar">
         <div class="jogo" data-aos="zoom-in" data-aos-duration="1000">
-        <iframe src="jogo/index.html" width="85%" height="580px" frameborder="0"></iframe>
-    </div>
-    <div class="mobile-aviso">
-      <h2>⚠️<br> Aviso de Compatibilidade</h2> <br>
-      <p>
-          O Travel Knight foi desenvolvido para ser jogado em computadores e não é compatível com dispositivos móveis. 
-          Para a melhor experiência de jogo, por favor, acesse esta página através de um desktop ou notebook.
-          <br><br>
-          Você pode conhecer mais sobre o jogo explorando as outras seções do site enquanto estiver no celular!
-      </p>
-  </div>
-</section>
+          <iframe
+            src="jogo/index.html"
+            width="85%"
+            height="580px"
+            frameborder="0"
+          ></iframe>
+        </div>
+        <div class="mobile-aviso">
+          <h2>
+            ⚠️<br />
+            Aviso de Compatibilidade
+          </h2>
+          <br />
+          <p>
+            O Travel Knight foi desenvolvido para ser jogado em computadores e
+            não é compatível com dispositivos móveis. Para a melhor experiência
+            de jogo, por favor, acesse esta página através de um desktop ou
+            notebook.
+            <br /><br />
+            Você pode conhecer mais sobre o jogo explorando as outras seções do
+            site enquanto estiver no celular!
+          </p>
+        </div>
+      </section>
     </main>
-    
-    <footer class="footer-jogar"  data-aos="fade-down" data-aos-duration="1000">
-      <p>Desenvolvido por Rafael Frossard</p> <br>
-      <a href="https://www.instagram.com/rafaelpnf/" title="instagram"><i class="fa-brands fa-instagram"></i></a>
+
+    <footer class="footer-jogar" data-aos="fade-down" data-aos-duration="1000">
+      <p>Desenvolvido por Rafael Frossard</p>
+      <br />
+      <a href="https://www.instagram.com/rafaelpnf/" title="instagram"
+        ><i class="fa-brands fa-instagram"></i
+      ></a>
     </footer>
-    <script>
-      function mostrarmenu() {
-          $("header nav").toggle(".esconder");
-      }
-  </script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        AOS.init({
-            once:true,
-        });
+      function mostrarmenu() {
+        $("header nav").toggle(".esconder");
+      }
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+      });
     </script>
   </body>
 </html>
