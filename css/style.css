@@ -17,8 +17,8 @@ body {
 header {
     background-color: rgb(37, 37, 107);
     width: 100%;
-    position: fixed;
     z-index: 10;
+    position: fixed;
     .botao-nav {
         display: none;
     }
@@ -129,7 +129,7 @@ form {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     color: white;
     label {
-        display: block;
+        display: none;
         margin: 15px 0 5px;
         font-size: 18px;
         color: white;
@@ -159,10 +159,15 @@ form {
     }
 }
 
+.esconder {
+    display: none;
+}
 @media (max-width:480px) {
     header {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
+        margin-inline: auto;
         img {
             width: 50%;
             margin-left: 0;
@@ -170,12 +175,22 @@ form {
         .botao-nav {
             display: block;
             margin: auto;
-            margin-right: 25px;
+            padding-left: 125px;
+            width: 50%;
+            font-size: 40px;
         }
-    }
+        }
+    
     header nav {
-        display: none;
+        display: none; /*///!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .col {
+            width: 100%;
+            text-align: center;
     }
+}
     footer {
         position: fixed;
         bottom: 0;
@@ -238,12 +253,12 @@ form {
         padding: 0;
     }
 }
-}
 .main-galeria {
     margin-top: 0;
     padding-top: 150px;
 }
 .main-contato {
     padding-top: 150px;
+}
 }
 }

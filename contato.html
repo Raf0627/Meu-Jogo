@@ -10,10 +10,14 @@
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <header>
       <img src="imagens/logo.png" alt="logo" class="logo" data-aos="zoom-in" data-aos-duration="1000">
+      <a href="javascript:mostrarmenu()" title="Menu" class="botao-nav">
+          <i class="fa-solid fa-bars"></i>
+      </a>
       <nav data-aos="fade-right" data-aos-duration="1000">
         <div class="col">
           <a href="index.html" title="home" class="active">Início</a>
@@ -50,6 +54,11 @@
       <a href="https://www.instagram.com/rafaelpnf/" title="instagram"><i class="fa-brands fa-instagram"></i></a>
     </footer>
     <script>
+        function mostrarmenu() {
+            $("header nav").toggle(".esconder");
+        }
+    </script>
+    <script>
       document.getElementById('botao').onclick = function () {
           var nome = document.getElementById('nome').value;
           var email = document.getElementById('email').value;
@@ -76,12 +85,9 @@
           const regex = /^[^\s]+@[^\s]+$/;
           return regex.test(email);
       };
-    </script><script>
-        function mostrarmenu() {
-            $(".header-nav").toggle();
-        }
-    </script>
+    </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         AOS.init({
             once:true,
