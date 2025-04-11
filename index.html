@@ -1,86 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Knight - Início</title>
-    <link rel="shortcut icon" href="imagens/Jump (1).PNG">
+    <link rel="icon" href="imagens/icon.PNG">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/all.min.css">
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-
 <body>
     <header>
-        <a href="index.html" title="home" data-aos="zoom-in" data-aos-duration="1000">
-            <img src="imagens/2343.png" alt="logo" class="imgLogo">
-        </a>
-        <nav data-aos="slide-left" data-aos-duration="1000">
-            <ul>
-                <li><a href="index.html" title="home" class="active">Início</a></li>
-                <li><a href="jogo.html" title="jogar">jogar</a></li>
-                <li><a href="sobre.html" title="sobre">Sobre</a></li>
-                <li><a href="galeria.html" title="galeria">galeria</a></li>
-                <li><a href="contato.html" title="contato">Contato</a></li>
-            </ul>
+        <img src="imagens/logo.png" alt="logo" class="logo" data-aos="zoom-in" data-aos-duration="1000">
+        
+        
+        <nav class="header-nav" data-aos="fade-right" data-aos-duration="1000">
+                <div class="col"><a href="index.html" title="home" class="active" style="color: white;">Início</a></div>
+                <div class="col"><a href="jogar.html" title="jogar">jogar</a></div>
+                <div class="col"><a href="sobre.html" title="sobre">Sobre</a></div>
+                <div class="col"><a href="galeria.html" title="galeria">galeria</a></div>
+                <div class="col"><a href="contato.html" title="contato">contato</a></div>
         </nav>
+        <a href="javascript:mostrarmenu()" title="Menu" class="botao-nav">
+            <i class="fa-solid fa-bars"></i>
+        </a>
     </header>
     <main>
-        <section data-aos="fade-up" data-aos-duration="1200">
+        <section class="inicio"  data-aos="fade-up" data-aos-duration="1000">
             <h1>Seja bem-vindo</h1>
             <p>Este é o site oficial do jogo Travel Knight, criado pelo aluno de TADS, Rafael Frossard.</p>
-            <img src="imagens/novaImg_LE_upscale_balanced_x4.jpg" alt="">
+            <img src="imagens/capa.jpg" alt="capa" class="capa">
         </section>
     </main>
-    <footer>
-        <p>Desenvolvido por Rafael Frossard</p>
-        <p><a href="https://facebook.com" title="Facebook"><i class="fab fa-facebook"></i></a></p>
+    <footer data-aos="fade-down" data-aos-duration="1000">
+        <p>Desenvolvido por Rafael Frossard</p> <br>
+        <a href="https://www.instagram.com/rafaelpnf/" title="instagram"><i class="fa-brands fa-instagram"></i></a>
     </footer>
+    <script src="js/aos.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const header = document.querySelector('header');
-            
-            
-            const menuButton = document.createElement('button');
-            menuButton.className = 'menu-toggle';
-            menuButton.innerHTML = '☰';
-            menuButton.setAttribute('aria-label', 'Menu');
-            
-            
-            header.insertBefore(menuButton, header.firstChild);
-            
-            const nav = document.querySelector('nav');
-            
-            
-            menuButton.addEventListener('click', () => {
-                nav.classList.toggle('active');
-                menuButton.innerHTML = nav.classList.contains('active') ? '✕' : '☰';
-            });
-
-            
-            document.addEventListener('click', (e) => {
-                if (!nav.contains(e.target) && !menuButton.contains(e.target)) {
-                    nav.classList.remove('active');
-                    menuButton.innerHTML = '☰';
-                }
-            });
+        function mostrarmenu() {
+            $(".header-nav").toggle();
+        }
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once:true,
         });
     </script>
-    
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-    AOS.init({
-        once: true,
-        offset: 100,
-        duration: 1000,
-        disable: 'mobile',
-        anchorPlacement: 'top-bottom'
-    });
-</script>
 </body>
-
 </html>
