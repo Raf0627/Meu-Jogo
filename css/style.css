@@ -14,35 +14,42 @@ body {
     width: 100%;
 }
 
+/*header*/
 header {
     background-color: rgb(37, 37, 107);
     width: 100%;
     z-index: 10;
     position: fixed;
+
     .botao-nav {
         display: none;
     }
+
     img {
         width: 13%;
         padding: 20px;
         margin-left: 50px;
         float: left;
     }
+
     nav {
-        display: flex; /* Comentário indica duplicação */
+        display: flex;
         flex-direction: row;
         float: right;
         text-transform: uppercase;
         padding-top: 37px;
         text-decoration: none;
+
         .col {
             padding: 15px;
             padding-inline: 40px;
             font-size: 20px;
+
             a {
                 text-decoration: none;
                 color: grey;
             }
+
             a:hover {
                 color: white;
                 font-size: larger;
@@ -52,11 +59,12 @@ header {
     }
 }
 
+/*main*/
 main {
-padding-top: 200px;
-padding-bottom: 50px;
-width: 80%;
-margin-inline: auto;
+    padding-top: 200px;
+    padding-bottom: 50px;
+    width: 80%;
+    margin-inline: auto;
 
     .inicio {
         padding: 20px;
@@ -64,15 +72,20 @@ margin-inline: auto;
         background-color: rgb(27, 27, 52);
         border-radius: 10px;
         text-align: center;
+
         h1 {
             font-size: 40px;
         }
+
         p {
             font-size: 20px;
         }
-        h1,p {
+
+        h1,
+        p {
             padding: 20px;
         }
+
         img {
             width: 100%;
         }
@@ -80,19 +93,9 @@ margin-inline: auto;
     }
 }
 
-footer {
-    background-color: rgb(16, 16, 35);
-    padding: 50px;
-    width: 100%;
-    text-align: center;
-    i {
-        font-size: 25px;
-    }
-}
-
 .main-jogar {
-padding-top: 133px;
-text-align: center;
+    padding-top: 133px;
+    text-align: center;
 }
 
 .mobile-aviso {
@@ -111,8 +114,10 @@ text-align: center;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
+
     .col {
         width: 50%;
+
         img {
             width: 100%;
             padding: 10px;
@@ -128,11 +133,13 @@ form {
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     color: white;
+
     label {
         margin: 15px 0 5px;
         font-size: 18px;
         color: white;
     }
+
     input {
         width: 100%;
         padding: 10px;
@@ -142,6 +149,7 @@ form {
         color: white;
         font-size: 16px;
     }
+
     button {
         background-color: rgb(37, 37, 107);
         color: white;
@@ -153,6 +161,7 @@ form {
         text-transform: uppercase;
         width: 100%;
     }
+
     button:hover {
         background-color: rgb(47, 47, 137);
     }
@@ -161,16 +170,33 @@ form {
 .esconder {
     display: none;
 }
+
+/*footer*/
+footer {
+    background-color: rgb(16, 16, 35);
+    padding: 50px;
+    width: 100%;
+    text-align: center;
+
+    i {
+        font-size: 25px;
+    }
+}
+
 @media (max-width:480px) {
+
+    /*header*/
     header {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         margin-inline: auto;
+
         img {
             width: 50%;
             margin-left: 0;
         }
+
         .botao-nav {
             display: block;
             margin: auto;
@@ -178,28 +204,37 @@ form {
             width: 50%;
             font-size: 40px;
         }
-        }
-    
+    }
+
     header nav {
         display: none;
         flex-direction: column;
         width: 100%;
+
         .col {
             width: 100%;
             text-align: center;
+        }
     }
-}
-    footer {
-        position: fixed;
-        bottom: 0;
-    }
-    iframe {
-        display: none;
-    }
+
+    /*main*/
+
     main {
         width: 80%;
         margin-bottom: 150px;
     }
+
+
+    .main-jogar {
+        width: 100%;
+        padding-top: 200px;
+    }
+
+    iframe {
+        display: none;
+    }
+
+
     .mobile-aviso {
         display: block;
         width: 80%;
@@ -209,54 +244,70 @@ form {
         padding: 20px;
         border-radius: 10px;
         margin-bottom: 150px;
-        h2,p {
-        margin-inline: auto;
-        text-align: center;
+
+        h2,
+        p {
+            margin-inline: auto;
+            text-align: center;
         }
+
         h2 {
             font-size: 40px;
         }
+
         p {
             font-size: 20px;
         }
     }
-    .main-jogar {
-        width: 100%;
-        padding-top: 200px;
-    }
+
     .main-sobre {
         width: 80%;
         margin-bottom: 150px;
+
         .section-sobre {
             padding: 0;
             padding-block: 20px;
-        h2 {
-           font-size: 40px;
+
+            h2 {
+                font-size: 40px;
+            }
+
+            p {
+                font-size: 20px;
+                padding: 0;
+            }
         }
-        p {
-            font-size: 20px;
+    }
+
+    .main-galeria {
+        margin-top: 0;
+        padding-top: 150px;
+    }
+
+    .section-galeria {
+        flex-direction: column;
+
+        .col {
+            margin: 0;
             padding: 0;
+            width: 100%;
+
+            img {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
         }
     }
-}
-.section-galeria {
-    flex-direction: column;
-    .col{
-        margin: 0;
-        padding: 0;
-        width: 100%;
-    img {
-        width: 100%;
-        margin: 0;
-        padding: 0;
+
+
+    .main-contato {
+        padding-top: 150px;
     }
-}
-.main-galeria {
-    margin-top: 0;
-    padding-top: 150px;
-}
-.main-contato {
-    padding-top: 150px;
-}
-}
+
+    /*footer*/
+    footer {
+        position: fixed;
+        bottom: 0;
+    }
 }
