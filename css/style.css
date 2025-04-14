@@ -228,6 +228,7 @@ footer {
     .main-jogar {
         width: 100%;
         padding-top: 200px;
+        padding-bottom: 1px;
     }
 
     iframe {
