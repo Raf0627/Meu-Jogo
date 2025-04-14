@@ -41,10 +41,8 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Text.Acts.SetText,
 		C3.Plugins.Audio.Cnds.IsTagPlaying,
 		C3.Plugins.System.Acts.GoToLayout,
-		C3.Plugins.Mouse.Cnds.OnObjectClicked,
 		C3.Plugins.System.Acts.ResetGlobals,
 		C3.Behaviors.Pin.Acts.PinByProperties,
-		C3.Plugins.System.Acts.ResetEventVar,
 		C3.Behaviors.Fade.Acts.StartFade,
 		C3.Behaviors.Platform.Cnds.IsMoving,
 		C3.Plugins.Sprite.Cnds.IsAnimPlaying,
@@ -73,7 +71,8 @@ self.C3_GetObjectRefTable = function () {
 		C3.ScriptsInEvents.FolhaDeEventosFase1_Event24_Act1,
 		C3.Plugins.Sprite.Cnds.IsBoolInstanceVarSet,
 		C3.Behaviors.Platform.Acts.SimulateControl,
-		C3.Plugins.Sprite.Acts.ToggleBoolInstanceVar
+		C3.Plugins.Sprite.Acts.ToggleBoolInstanceVar,
+		C3.Plugins.Mouse.Cnds.OnObjectClicked
 	];
 };
 self.C3_JsPropNameTable = [
@@ -163,7 +162,6 @@ self.C3_JsPropNameTable = [
 	{Sprite14: 0},
 	{inimigo3: 0},
 	{visao: 0},
-	{ultimoLayout: 0},
 	{Inimigos: 0},
 	{machine: 0},
 	{fase1: 0},

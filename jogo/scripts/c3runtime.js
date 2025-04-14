@@ -1324,8 +1324,6 @@ self.C3_ExpressionFuncs = [
 			const v0 = p._GetNode(0).GetVar();
 			return () => v0.GetValue();
 		},
-		() => "som1",
-		() => "LayoutName",
 		() => "atacar",
 		() => "parado",
 		() => "andar",
@@ -1342,7 +1340,8 @@ self.C3_ExpressionFuncs = [
 		() => "parado2",
 		() => 3,
 		() => "cor2",
-		() => 7
+		() => 7,
+		() => "som1"
 ];
 
 

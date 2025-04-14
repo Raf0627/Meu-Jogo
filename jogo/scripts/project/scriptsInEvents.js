@@ -2,15 +2,6 @@
 
 const scriptsInEvents = {
 
-	async FolhaDeEventosFase2_Event3_Act1(runtime, localVars)
-	{
-		let vidas = runtime.globalVars.Vidas;
-		
-		vidas = 0;
-		
-		runtime.globalVars.Vidas = vidas
-	},
-
 	async FolhaDeEventosFase1_Event8_Act1(runtime, localVars)
 	{
 		let vidas = runtime.globalVars.Vidas;
@@ -70,6 +61,15 @@ const scriptsInEvents = {
 		let vidas = runtime.globalVars.Vidas;
 		
 		vidas --;
+		
+		runtime.globalVars.Vidas = vidas
+	},
+
+	async FolhaDeEventosFase2_Event3_Act1(runtime, localVars)
+	{
+		let vidas = runtime.globalVars.Vidas;
+		
+		vidas = 0;
 		
 		runtime.globalVars.Vidas = vidas
 	}
